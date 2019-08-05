@@ -104,7 +104,8 @@ public class BookDAO {
     }
 
     public void updateBook(Book book) {
-        String sql = "UPDATE book SET title = ?, author = ?, price = ?" + "WHERE id = ?";
+        String sql = "UPDATE book SET title = ?, author = ?, price = ?" +
+                " WHERE id = ?";
         try{
             PreparedStatement statement = jdbcConnection.prepareStatement(sql);
             statement.setString(1, book.getTitle());
